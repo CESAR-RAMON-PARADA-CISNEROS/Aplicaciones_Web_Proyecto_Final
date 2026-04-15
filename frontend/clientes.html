@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Clientes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles_clientes.css">
+</head>
+
+<body>
+    <header>
+        <a href="inicio.html">
+            <img src="./img/fondo.webp" alt="fondo">
+        </a>
+        <h1>Nocturna Clientes</h1>
+        <button onclick="logout()" class="btn_header">Cerrar sesión</button>
+    </header>
+
+    <nav>
+        <a href="mecanicos.html">Mecánicos</a>
+        <a href="clientes.html">Clientes</a>
+    </nav>
+
+    <div class="contenedor">
+        <div class="mecanicos">
+            <p>Agregar cliente</p>
+
+            <div class="input-container">
+                <input type="text" id="nombre" class="input-field" placeholder=" " required>
+                <label for="nombre" class="input-label">Nombre</label>
+            </div>
+            <div class="input-container">
+                <input type="tel" pattern="[0-9]{10}" id="telefono" class="input-field" placeholder=" " required>
+                <label for="telefono" class="input-label">Teléfono</label>
+            </div>
+            <div class="input-container">
+                <input type="text" id="auto" class="input-field" placeholder=" " required>
+                <label for="auto" class="input-label">Auto</label>
+            </div>
+            <div class="input-container">
+                <input type="text" id="problema" class="input-field" placeholder=" " required>
+                <label for="problema" class="input-label">Descripción del Problema</label>
+            </div>
+
+            <button onclick="agregar()" class="btn_agregar">Agregar</button>
+            <button onclick="cancelarEdicion()" class="btn_cancelar" style="display:none;">Cancelar</button>
+        </div>
+
+        <div class="tabla">
+            <p>Clientes Registrados</p><br>
+
+            <table>
+                <thead>
+                    <tr class="titulos">
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Teléfono</th>
+                        <th>Auto</th>
+                        <th>Descripción del Problema</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla_clientes"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Nocturna. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="./js/auth.js"></script>
+    <script src="./js/clientes.js"></script>
+</body>
+
+</html>

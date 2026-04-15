@@ -1,0 +1,131 @@
+body {
+    background-image: url('../img/fondo.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #160429;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+header {
+    background-color: rgba(29, 0, 41, 0.995);
+    position: absolute;
+    top: -10px;
+    height: 130px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    letter-spacing: 15px;
+}
+
+.contenedor {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 100%;
+    height: 300px;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, sans-serif;
+    color: #000;
+    letter-spacing: 3px;
+}
+
+.input-container {
+    position: relative;
+    margin: 20px 0;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    background-color: transparent;
+}
+
+.input-label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    font-size: 16px;
+    color: #aaa;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.input-field:focus + .input-label,
+.input-field:not(:placeholder-shown) + .input-label {
+    top: -15px;
+    font-size: 12px;
+    color: #007bff;
+}
+
+button {
+ background-color: #444141;
+ border-radius: 4px;
+ color: #fff;
+ cursor: pointer;
+ padding: 15px 30px;
+ font-size: 18px;
+ font-weight: bold;
+ letter-spacing: 1px;
+ border: none;
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ transition: 0.3s;
+}
+
+button:hover {
+ background-color: #160429;
+ color: #fff;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+
+    body {
+        height: auto;
+        padding: 20px;
+        align-items: flex-start;
+    }
+
+    header {
+        position: relative;
+        height: auto;
+        font-size: 22px;
+        letter-spacing: 5px;
+        padding: 15px 10px;
+    }
+
+    .contenedor {
+        width: 90%;
+        height: auto;
+        padding: 30px 20px;
+        margin-top: 30px;
+    }
+
+    .input-field {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+}

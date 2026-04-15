@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles_login.css">
+    <title>Login</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Bienvenido a Nocturna</h1>
+    </header>
+
+    <div class="contenedor">
+        <h1>Iniciar Sesión</h1>
+
+        <form action="http://localhost:3000/login" method="POST">
+
+            <div class="input-container">
+                <input type="email" id="correo" name="correo" class="input-field" placeholder=" " required>
+                <label for="correo" class="input-label">👤 Usuario</label>
+            </div>
+
+            <div class="input-container">
+                <input type="password" id="password" name="password" class="input-field" placeholder=" " required>
+                <label for="password" class="input-label">🔒 Contraseña</label>
+            </div>
+
+            <button type="submit">Ingresar</button>
+
+        </form>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+
+        if (params.get('error') === '1') {
+            alert('Usuario o contraseña incorrectos');
+        }
+    </script>
+
+</body>
+
+</html>
