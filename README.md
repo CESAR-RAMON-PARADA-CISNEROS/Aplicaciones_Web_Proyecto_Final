@@ -12,7 +12,14 @@ phpmyAdmin
 3. Importar el archivo "nocturna.sql" incluido en el proyecto
 
 ## INSTALACION DE DEPENDENCIAS Y NODE MODULES EN EL BACKEND
-Antes de ejecutar el proyecto, se debe ingresar a la direccion de la carpeta del backend desde la terminal (PowerShell o CMD) con el comando "cd /ruta de la carpeta", una vez ahi escribir el siguiente comandos "npm install", de esta manera se instalaran todas las dependencias necesarias para el proyecto, las cuales ya vienen el código.
+Antes de ejecutar el proyecto, se debe ingresar a la direccion de la carpeta del backend desde la terminal (PowerShell o CMD) con el comando "cd /ruta de la carpeta", una vez ahi escribir los siguientes comandos: 
+- npm init -y,
+- npm install express
+- npm install cors
+- npm install mysql2
+- npm install express-session bcrypt
+- npm install --save-dev nodemon 
+de esta manera se instalaran todas las dependencias necesarias para el proyecto.
 
 Una vez instaladas todas las dependencias, se debe ingresar al archivo "package.json" de la carpeta del backend y el apartado de "scripts" se coloca lo siguiente:
 "start": "node index.js",
