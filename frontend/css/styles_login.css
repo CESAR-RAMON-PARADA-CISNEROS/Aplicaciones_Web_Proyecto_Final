@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-image: url('../img/fondo.webp');
     background-size: cover;
@@ -5,19 +11,22 @@ body {
     background-repeat: no-repeat;
     background-color: #160429;
     font-family: Arial, sans-serif;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     height: 100vh;
-    margin: 0;
 }
 
 header {
     background-color: rgba(29, 0, 41, 0.995);
     position: absolute;
-    top: -10px;
+    top: 0;
+    left: 0;
     height: 130px;
     width: 100%;
+
     text-align: center;
     color: #fff;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -27,6 +36,10 @@ header {
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     letter-spacing: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .contenedor {
@@ -34,11 +47,13 @@ header {
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+
     max-width: 400px;
     width: 100%;
     height: 300px;
+
     text-align: center;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, sans-serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: #000;
     letter-spacing: 3px;
 }
@@ -76,31 +91,33 @@ header {
 }
 
 button {
- background-color: #444141;
- border-radius: 4px;
- color: #fff;
- cursor: pointer;
- padding: 15px 30px;
- font-size: 18px;
- font-weight: bold;
- letter-spacing: 1px;
- border: none;
- font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
- transition: 0.3s;
+    background-color: #444141;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: 0.3s;
 }
 
 button:hover {
- background-color: #160429;
- color: #fff;
+    background-color: #160429;
+    color: #fff;
 }
+
 
 /* Responsivo */
 @media (max-width: 768px) {
 
     body {
+        display: block;
         height: auto;
+        min-height: 100vh;
         padding: 20px;
-        align-items: flex-start;
     }
 
     header {
@@ -115,7 +132,7 @@ button:hover {
         width: 90%;
         height: auto;
         padding: 30px 20px;
-        margin-top: 30px;
+        margin: 30px auto;
     }
 
     .input-field {
@@ -127,5 +144,24 @@ button:hover {
         width: 100%;
         padding: 12px;
         font-size: 16px;
+    }
+}
+
+/* Responsivo para dispositivos móviles */
+@media (max-width: 430px) {
+
+    header {
+        font-size: 18px;
+        letter-spacing: 3px;
+    }
+
+    .contenedor {
+        width: 95%;
+        padding: 20px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px;
     }
 }
