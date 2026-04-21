@@ -391,3 +391,127 @@ footer p {
         padding: 8px;
     }
 }
+
+/* Responsivo para dispositivos móviles */
+@media (max-width: 480px) {
+
+    button, 
+    input[type="button"], 
+    input[type="submit"], 
+    .btn_header, 
+    .btn_agregar, 
+    .btn_cancelar, 
+    .btn_editar, 
+    .btn_eliminar {
+        -webkit-appearance: none;
+        appearance: none;
+        border: none;
+        box-shadow: none;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif !important;
+    }
+
+    header {
+        position: relative;
+        height: auto;
+        flex-direction: column;
+        padding: 20px 10px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+
+    header img {
+        height: 75px;
+        margin: 0 0 10px 0;
+    }
+
+    header h1 {
+        font-size: 24px;
+        letter-spacing: 4px;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .btn_header {
+        margin: 15px 0 5px 0 !important;
+        width: 130px;
+        height: 35px;
+        background-color: white !important;
+        color: #000 !important;
+        border: 2px solid #444141 !important;
+        border-radius: 10px !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+    }
+
+    nav {
+        margin-top: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    nav a {
+        font-size: 16px;
+        width: 42%;
+        text-align: center;
+        padding: 10px 5px;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .contenedor {
+        width: 95%;
+        flex-direction: column;
+        height: auto;
+        padding: 20px 15px;
+        margin: 15px auto;
+    }
+
+    .mecanicos, .tabla {
+        width: 100%;
+        margin: 10px 0;
+        padding: 15px;
+    }
+
+    .mecanicos p, .tabla p {
+        font-size: 20px;
+    }
+
+    .btn_agregar, .btn_cancelar {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+        padding: 15px;
+        font-size: 18px;
+        border-radius: 8px !important;
+        color: #fff !important;
+        text-transform: uppercase;
+    }
+
+    .btn_agregar { background-color: #008000 !important; }
+    .btn_cancelar { background-color: #c0392b !important; }
+
+    .tabla {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    table th, table td {
+        font-size: 11px;
+        padding: 8px 5px;
+        white-space: nowrap;
+    }
+
+    .btn_editar, .btn_eliminar {
+        padding: 6px 10px;
+        font-size: 11px;
+        border-radius: 4px !important;
+        color: white !important;
+        font-family: 'Franklin Gothic Medium', Arial, sans-serif !important;
+    }
+
+    .btn_editar { background-color: #2980b9 !important; }
+    .btn_eliminar { background-color: #c0392b !important; }
+}
